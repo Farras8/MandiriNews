@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/ImageViewHead"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scaleType="centerCrop"
+        android:src="@drawable/loading_icon" />
+
+    <TextView
+        android:id="@+id/TitleHead"
+        android:textAlignment="center"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:text="Title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/blue"
+        android:padding="10dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/blue"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/AuthorIcon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/baseline_account_circle_24"
+            android:layout_marginLeft="10dp"/>
+
+
+        <TextView
+            android:id="@+id/AuthorHead"
+            android:textSize="10dp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:text="Author"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_gravity="end"/>
+
+    </LinearLayout>
+</LinearLayout>

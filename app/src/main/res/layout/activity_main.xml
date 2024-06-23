@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".ui.main.MainActivity">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imageLogo"
+                android:layout_width="120dp"
+                android:layout_height="80dp"
+                android:layout_marginLeft="16dp"
+                android:src="@drawable/logo_mandiri" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+    <TextView
+        android:text="Trending Topic"
+        android:textColor="@color/black"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_marginLeft="7dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/Headline"
+        android:layout_width="match_parent"
+        android:layout_height="270dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        app:cardCornerRadius="10dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardElevation="10dp">
+
+        <ViewFlipper
+            android:id="@+id/viewFlipper"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:flipInterval="10000"
+            android:autoStart="true"
+            android:inAnimation="@android:anim/slide_in_left"
+            android:outAnimation="@android:anim/slide_out_right">
+
+
+    </ViewFlipper>
+</androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="7dp"
+            android:layout_marginRight="7dp"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/btnGeneral"
+                    android:text="General"
+                    android:textColor="@color/gray"
+                    android:textStyle="bold"
+                    android:textSize="22dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/btnSport"
+                    android:text="Sport"
+                    android:textColor="@color/gray"
+                    android:textStyle="bold"
+                    android:textSize="22dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"/>
+                <TextView
+                    android:id="@+id/btnHealth"
+                    android:text="Health"
+                    android:textColor="@color/gray"
+                    android:textStyle="bold"
+                    android:textSize="22dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:id="@+id/btnScience"
+                    android:text="Science"
+                    android:textColor="@color/gray"
+                    android:textStyle="bold"
+                    android:textSize="22dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:id="@+id/btnTechnology"
+                    android:text="Technology"
+                    android:textColor="@color/gray"
+                    android:textStyle="bold"
+                    android:textSize="22dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:id="@+id/btnBusiness"
+                    android:text="Business"
+                    android:textColor="@color/gray"
+                    android:textStyle="bold"
+                    android:textSize="22dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:id="@+id/btnEntertainment"
+                    android:text="Entertainment"
+                    android:textColor="@color/gray"
+                    android:textStyle="bold"
+                    android:textSize="22dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray"/>
+
+    </LinearLayout>
+
+
+
+    <TextView
+        android:textColor="@color/black"
+        android:text="Latest News"
+        android:layout_marginTop="15dp"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_marginLeft="7dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycleViewNews"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        tools:listitem="@layout/recycle1" />
+
+</LinearLayout>
